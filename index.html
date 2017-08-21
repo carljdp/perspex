@@ -18,22 +18,50 @@
 
     <div id="perspex-container" class="perspex-container">
 
-      <svg width="400px" height="100px">
+      <svg width="100%" height="100%">
+
+        <defs>
+            <filter id="f3" x="0" y="0" width="150%" height="150%">
+              <feOffset result="offOut" in="SourceAlpha" dx="20" dy="20" />
+              <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+              <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+            </filter>
+          </defs>
+
+
         <rect x="0" y="0"
-          class="stripe1" />
+          class="stripe1" filter="url(#f3)"/>
         <rect x="0" y="0"
-          class="stripe2" />
+          class="stripe2" filter="url(#f3)"/>
+
+        <text x="10" y="30" style="font-size:2rem; font-family:helvetica;">
+          Jack Black
+        </text>
+        <text x="10" y="50" style="font-size:1rem; font-family:helvetica;">
+          H/S Menlopark
+          <tspan x="10" y="70">u/18 1st Team</tspan>
+        </text>
+
       </svg>
 
     </div>
 
     <div id="perspex-container" class="perspex-container">
 
-      <svg width="400px" height="100px">
+      <svg width="100%" height="100%">
         <rect x="0" y="0"
           class="stripe3" />
         <rect x="0" y="0"
           class="stripe4" />
+
+        <text x="10" y="30" style="font-size:2rem; font-family:helvetica;">
+          Bob Marley
+        </text>
+        <text x="10" y="50" style="font-size:1rem; font-family:helvetica;">
+          H/S Menlopark
+          <tspan x="10" y="70">u/18 1st Team</tspan>
+        </text>
+
       </svg>
 
     </div>

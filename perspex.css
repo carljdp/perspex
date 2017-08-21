@@ -1,54 +1,72 @@
+body {
+  background-color: #333;
+}
 .perspex-container {
   height: 100px;
   width: 400px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
   margin: 0;
   padding: 0;
   display: inline-block;
   border-radius: 5px;
 }
 /* The animation code */
-@keyframes move {
+@keyframes moveToLast {
   0% {
     width: 75px;
     height: 250px;
-    transform: translate(300px, -60px) rotate(45deg);
+    transform: translate(325px, -60px) rotate(45deg);
   }
   100% {
     width: 75px;
     height: 250px;
-    transform: translate(400px, -60px) rotate(45deg);
+    transform: translate(430px, -60px) rotate(45deg);
+  }
+}
+@keyframes move {
+  0% {
+    width: 75px;
+    height: 250px;
+    transform: translate(225px, -60px) rotate(45deg);
+  }
+  100% {
+    width: 75px;
+    height: 250px;
+    transform: translate(325px, -60px) rotate(45deg);
   }
 }
 .stripe1 {
-  fill: rgba(125, 0, 50, 0.8);
-  animation-name: move;
-  animation-duration: 12s;
-  animation-iteration-count: infinite;
+  fill: rgba(133, 1, 53, 0.8);
+  animation-name: moveToLast;
+  animation-duration: 8s;
+  animation-iteration-count: 1;
   animation-delay: 0s;
-  animation-direction: alternate;
+  animation-fill-mode: forwards;
 }
 .stripe2 {
-  fill: rgba(0, 125, 50, 0.8);
+  fill: rgba(0, 131, 53, 0.8);
   animation-name: move;
   animation-duration: 15s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   animation-delay: 0s;
-  animation-direction: alternate;
+  animation-fill-mode: forwards;
 }
 .stripe3 {
-  fill: rgba(255, 150, 0, 0.9);
-  animation-name: move;
+  fill: rgba(255, 191, 0, 0.9);
+  animation-name: moveToLast;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-delay: 0s;
   animation-direction: alternate;
 }
 .stripe4 {
-  fill: rgba(0, 70, 200, 0.8);
+  fill: rgba(0, 89, 255, 0.8);
   animation-name: move;
   animation-duration: 13s;
   animation-iteration-count: infinite;
   animation-delay: 0s;
   animation-direction: alternate;
+}
+.boxshadow {
+  box-shadow: 20px 20px 30px 10px rgba(0, 0, 0, 0.75);
 }
